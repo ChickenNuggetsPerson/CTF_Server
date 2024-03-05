@@ -1,0 +1,1 @@
+nodemon --config nodemon.json -x "npx tsc && node dist/main.js"
