@@ -2,9 +2,9 @@
 
 
 enum CTFType {
-    DDos,
+    DDOS,
     passwordBrute,
-    // Add the rest of these
+    RFID
 }
 
 interface CTF {
@@ -31,8 +31,12 @@ function makeUUID(length: number) {
     return result;
 }
 
+function genCTF() {
+    return `SHS_CTF{${makeUUID(10).toUpperCase()}-${makeUUID(10).toUpperCase()}}`
+}
 
 
 
 
-export { CTFType, CTF, User, makeUUID }
+
+export { CTFType, CTF, User, makeUUID, genCTF}

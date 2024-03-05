@@ -43,11 +43,13 @@ require("dns").lookup(
     }
 );
 
+import { genCTF } from "./lib";
+
 function startMaster() {
     
     app.listen(port, () => {
         console.log(`Master Server - Started at locataion ${address}:${port}`);
-
+        console.log(genCTF())
     });
     
 }
